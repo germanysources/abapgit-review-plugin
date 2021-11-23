@@ -1,0 +1,54 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<abapGit version="v1.0.0" serializer="LCL_OBJECT_FUGR" serializer_version="v1.0.0">
+ <asx:abap xmlns:asx="http://www.sap.com/abapxml" version="1.0">
+  <asx:values>
+   <INCLUDES>
+    <SOBJ_NAME>LZABAPGIT_REVIEWTOP</SOBJ_NAME>
+    <SOBJ_NAME>SAPLZABAPGIT_REVIEW</SOBJ_NAME>
+   </INCLUDES>
+   <FUNCTIONS>
+    <item>
+     <FUNCNAME>ZAG_REVIEW_READ_MERGE_REQUESTS</FUNCNAME>
+     <SHORT_TEXT>Read merge/pull requests</SHORT_TEXT>
+     <IMPORT>
+      <RSIMP>
+       <PARAMETER>IV_TRKORR</PARAMETER>
+       <REFERENCE>X</REFERENCE>
+       <TYP>TRKORR</TYP>
+      </RSIMP>
+     </IMPORT>
+     <EXPORT>
+      <RSEXP>
+       <PARAMETER>ET_MERGE_REQUESTS</PARAMETER>
+       <REFERENCE>X</REFERENCE>
+       <TYP>ZAOR_MERGE_REQ_URL_TT</TYP>
+      </RSEXP>
+     </EXPORT>
+     <EXCEPTION>
+      <RSEXC>
+       <EXCEPTION>CX_STATIC_CHECK</EXCEPTION>
+      </RSEXC>
+     </EXCEPTION>
+     <DOCUMENTATION>
+      <RSFDO>
+       <PARAMETER>IV_TRKORR</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>Request/Task</STEXT>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>ET_MERGE_REQUESTS</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>Merge Request URL</STEXT>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>CX_STATIC_CHECK</PARAMETER>
+       <KIND>X</KIND>
+       <STEXT>Exceptions with Static and Dynamic Check of RAISING Clause</STEXT>
+      </RSFDO>
+     </DOCUMENTATION>
+     <EXCEPTION_CLASSES>X</EXCEPTION_CLASSES>
+    </item>
+   </FUNCTIONS>
+  </asx:values>
+ </asx:abap>
+</abapGit>
